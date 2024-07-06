@@ -77,7 +77,11 @@ const Chat = () => {
                 <div>
                     {messages.map((msg, index) => (
                         <div key={index} style={{ marginBottom: "10px" }}>
-                            <strong>{msg.sender}</strong> [{msg.date} ]:{" "}
+                            <strong>{msg.sender}</strong>{" "}
+                            <span className="small-text">
+                                [{msg.date}{" "}
+                                <span className="time">{msg.time}</span>]:
+                            </span>{" "}
                             {msg.message}
                         </div>
                     ))}
